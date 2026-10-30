@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stopwatch Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">◷</span>
+                <h1>Stopwatch<span>Pro</span></h1>
+            </div>
+
+            <button id="themeBtn" class="theme-btn">
+                ☀ Light Mode
+            </button>
+        </header>
+
+        <!-- Main Section -->
+        <main>
+
+            <section class="hero">
+                <p class="tagline">TIME MANAGEMENT MADE SIMPLE</p>
+                <h2>Every Second <span>Counts.</span></h2>
+                <p class="subtitle">
+                    Track your time, record your laps and stay productive.
+                </p>
+            </section>
+
+            <!-- Stopwatch Card -->
+            <section class="stopwatch-card">
+
+                <div class="status" id="status">
+                    <span class="status-dot"></span>
+                    Ready to Start
+                </div>
+
+                <div class="timer" id="display">
+                    00:00:00<span class="milliseconds">.00</span>
+                </div>
+
+                <p class="timer-label">
+                    HOURS &nbsp; MINUTES &nbsp; SECONDS
+                </p>
+
+                <!-- Control Buttons -->
+                <div class="controls">
+
+                    <button id="startBtn" class="btn start-btn">
+                        ▶ Start
+                    </button>
+
+                    <button id="lapBtn" class="btn lap-btn" disabled>
+                        ⚑ Lap
+                    </button>
+
+                    <button id="resetBtn" class="btn reset-btn" disabled>
+                        ↻ Reset
+                    </button>
+
+                </div>
+
+                <!-- Statistics -->
+                <div class="stats">
+
+                    <div class="stat-box">
+                        <p>Total Laps</p>
+                        <h3 id="totalLaps">0</h3>
+                    </div>
+
+                    <div class="stat-box">
+                        <p>Fastest Lap</p>
+                        <h3 id="fastestLap">--:--</h3>
+                    </div>
+
+                    <div class="stat-box">
+                        <p>Slowest Lap</p>
+                        <h3 id="slowestLap">--:--</h3>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Lap History -->
+            <section class="history-card">
+
+                <div class="history-header">
+                    <div>
+                        <h2>Lap History</h2>
+                        <p>Your recorded time intervals</p>
+                    </div>
+
+                    <div class="history-actions">
+                        <button id="exportBtn" class="small-btn">
+                            ↓ Export CSV
+                        </button>
+
+                        <button id="clearBtn" class="small-btn clear-btn">
+                            Clear
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Lap</th>
+                                <th>Lap Time</th>
+                                <th>Total Time</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="lapList">
+                            <tr class="empty-row">
+                                <td colspan="3">
+                                    No laps recorded yet. Start your stopwatch!
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with ♥ | Stopwatch Pro</p>
+            <p class="shortcuts">
+                Space: Start/Pause &nbsp; | &nbsp;
+                L: Lap &nbsp; | &nbsp;
+                R: Reset
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
